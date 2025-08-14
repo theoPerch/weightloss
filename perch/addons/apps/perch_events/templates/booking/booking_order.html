@@ -1,0 +1,40 @@
+<main class="page__content page__gap container">
+    <div class="productInfo col-md-6 offset-md-3">
+        <div class="productInfo__card productCard mt-5 ">
+            <div class="card-body grey-border d-flex flex-column gap-3 justify-content-between p-5">
+
+                <div class="productCard__head mb-4">
+                    <h1 class="urbanist-bold">Order Details</h1>
+
+                    <span class="productCard__price urbanist-medium lh-1 color-blue"><b>Order ID:</b>
+                        <perch:events id="orderid" /></span>
+                </div>
+
+                <div class="productCard__order d-flex flex-column gap-3">
+                    <span class="productCard__price urbanist-medium lh-1">
+                        <b>Total:</b>
+                        <perch:events id="itemTotal" />
+                        GBP
+                    </span>
+                    <span class="productCard__price urbanist-medium lh-1">
+                        <b>Date:</b>
+                        <perch:events id="date" />
+                        <perch:events id="time" />
+                    </span>
+                    <span class="productCard__price urbanist-medium lh-1">
+                        <b>Status:</b>
+                        <perch:events id="status" />
+                    </span>
+
+                    <div class="productCard__actions d-flex gap-3">
+                        <span class="productCard__price urbanist-medium lh-1">
+                            <b>Booked Test:</b>
+                            <perch:events id="title" />
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</main>

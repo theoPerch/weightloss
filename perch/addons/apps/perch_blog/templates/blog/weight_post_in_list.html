@@ -1,0 +1,60 @@
+<perch:before>
+
+
+
+
+</perch:before>
+
+
+<div class="col-sm-12 col-md-4 col-lg-4">
+
+
+    <div class="success_card" style="margin-top: 25px;" onclick="window.location.href='<perch:blog id="postURL" />';" >
+    <div class="i_feel">
+        <div class="card_button">
+            <a href="<perch:blog id="postURL" />"><span>weight loss NEWS</span></a>
+        </div>
+        <div class="card_heading">
+            <h5><perch:blog id="postTitle" /></h5>
+        </div>
+        <div class="card_content">
+
+            <p>          <perch:blog id="excerpt" type="textarea" textile="true" />
+
+
+            </p>            </div>
+    </div>
+    <div class="card_mega_img" style="margin-top: 45px; " >
+        <div class="card_title">
+            <a href="<perch:blog id="postURL" />" rel="bookmark"  style="text-decoration: none;color: #000;" ><b>Read more <i class="fa-solid fa-arrow-right"></i></b></a>
+        </div>
+        <perch:if exists="image">
+
+            <img style="width: 100%;" src="<perch:blog id="image" type="image" width="320" height="240" crop="true" label="Image" order="4" />" alt="<perch:blog id="postTitle" />" />
+
+        </perch:if>
+    </div>
+</div>
+
+
+</div>
+<perch:after>
+
+    <perch:if exists="paging">
+        <div class="paging">
+            Page <perch:blog id="current_page" /> of <perch:blog id="number_of_pages" />
+            <perch:blog id="page_links" encode="false" />
+            <perch:if exists="not_first_page">
+                <a href="<perch:blog id="prev_url" encode="false" />">Previous</a>
+            </perch:if>
+            <perch:if exists="not_last_page">
+                <a href="<perch:blog id="next_url" encode="false" />">Next</a>
+            </perch:if>
+        </div>
+    </perch:if>
+</perch:after>
+
+
+
+
+

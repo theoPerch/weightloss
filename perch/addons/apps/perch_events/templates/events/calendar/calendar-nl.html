@@ -1,0 +1,35 @@
+<div class="scheduleActions__group mx-auto">
+    <div
+            class="scheduleActions__nav d-flex justify-content-between align-items-center">
+        <button
+                aria-label="Previous mounth"
+                class="scheduleActions__button scheduleActions__button_prev rounded-circle"
+                id="prevMonth">
+            <a  class="scheduleActions__button scheduleActions__button_prev rounded-circle" id="prevMonth" href="?order=<perch:events id="successful_order_id"/>&d=<perch:events id="prev_month" format="Y-m" />"> <perch:events id="prev_month" format="M Y" /></a>
+
+
+        </button>
+        <span
+                id="currentMonth"
+                class="scheduleActions__mounth inter-medium text-center">
+              <a href="?order=<perch:events id='successful_order_id'/>&d=<perch:events id="current_month" format="M" />"></a>
+
+
+                    									</span>
+        <button
+                aria-label="Next mounth"
+                class="scheduleActions__button scheduleActions__button_next rounded-circle"
+                id="nextMonth">
+
+            <a  class="scheduleActions__button scheduleActions__button_next rounded-circle" id="nextMonth" href="?order=<perch:events id="successful_order_id"/>&d=<perch:events id="next_month" format="Y-m" />"> </a>
+
+        </button>
+    </div>
+    <div
+            id="weekdays"
+            class="scheduleActions__weekdays d-flex flex-wrap justify-content-between"></div>
+    <div
+            id="days"
+            class="scheduleActions__group_days"></div>
+</div>
+

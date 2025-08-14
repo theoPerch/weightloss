@@ -1,0 +1,71 @@
+body {
+	font-family: arial;
+}
+
+
+
+.poll-content-outer {
+	background-color: #F0F0F0;
+	border-radius: 4px;
+	padding: 20px;
+	max-width: 350px;
+	min-height: 200px;
+}
+
+.question {
+	padding: 10px 0px 0px 0px;
+}
+
+.radio-input {
+	margin: 0px 10px 0px 10px;
+}
+
+
+
+.next-link {
+	float: right;
+	background-color: #226ea0;
+	color: #ffffff;
+	border-radius: 3px;
+	border: 1px solid #20628e;
+	display: inline-block;
+	padding: 10px 40px;
+	cursor: pointer;
+}
+
+.error {
+	text-align: center;
+	padding: 50px;
+	color: #cc5353;
+}
+
+.poll-bottom {
+	margin-top: 20px;
+}
+
+.poll-heading {
+	text-transform: uppercase;
+	background: #CCC;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.answer-rating {
+	margin-bottom: 5px;
+}
+.answer-text {
+	text-transform: uppercase;
+	background: #73b2dc;
+	padding: 5px;
+	font-size: 0.8em;
+	width: 120px;
+	display: inline-block;
+}
+.answer-count {
+	text-transform: uppercase;
+	background: #FFF;
+	padding: 5px;
+	font-size: 0.8em;
+	width: 50px;
+	display: inline-block;
+}

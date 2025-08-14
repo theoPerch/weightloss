@@ -1,0 +1,86 @@
+<h2><perch:events id="selected_month" format="M Y" /></h2>
+<div class="scheduleActions__group mx-auto">
+    <div
+            class="scheduleActions__nav d-flex justify-content-between align-items-center">
+  
+      <a  class="scheduleActions__button scheduleActions__button_prev rounded-circle" id="prevMonth" href="?order=<perch:events id="successful_order_id"/>&d=<perch:events id="prev_month" format="Y-m" />"> <perch:events id="prev_month" format="M Y" /></a>
+        <perch:content id='successful_order_id'/>
+        *   <perch:events id='successful_order_id'/>
+        <span
+                id="currentMonth"
+                class="scheduleActions__mounth inter-medium text-center">
+
+               <a href="?order=<perch:events id='successful_order_id'/>&d=<perch:events id="current_month" format="M" />"></a>
+
+        									</span>
+
+     <a  class="scheduleActions__button scheduleActions__button_next rounded-circle" id="nextMonth" href="?order=<perch:events id="successful_order_id"/>&d=<perch:events id="next_month" format="Y-m" />"> </a>
+        <perch:events id="next_month" format="M Y" />
+    </div>
+    <div
+
+            class="day scheduleActions__weekdays d-flex flex-wrap justify-content-between"> <perch:events id="header" encode="false" /></div>
+    <div
+
+            class="scheduleActions__group_days">  <perch:events id="body" encode="false" /></div>
+</div>
+
+<style>
+    #loading {
+        display: none;
+    }
+</style>
+<!-- Loading GIF -->
+<div id="loading">
+    <img src="loading.png" alt="Loading...">
+</div>
+<script>
+    // Select all elements with the class 'a'
+    const elements = document.querySelectorAll('.submit');
+
+    // Loop through each element and add a click event listener
+    elements.forEach((element) => {
+        element.addEventListener('click', function() {
+            // Your click action here
+            console.log('Element clicked:', element);
+            document.getElementById('loading').style.display = 'block';
+           var formid= element.id;
+            console.log(formid);
+           var result= formid.split("-");
+           var formpref=result[0].split("_");
+           console.log(result);
+           // document.getElementById(formpref[0]+'_booking'+result[1]).submit();
+            // Optionally, you could disable the button to prevent multiple clicks
+            // document.getElementById('submitBtn').disabled = true;
+
+            // Submit the form after a delay or immediately
+          setTimeout(function() {
+             // var formpref=result[0].split("_");
+           console.log(result);
+              let trimmedStr =result[1].replace(/:/g, '');
+              console.log(formpref[0]+'_booking'+trimmedStr);
+              document.getElementById(formpref[0]+'_booking'+trimmedStr).submit();
+            }, 500);
+
+            // You can put any logic you want to be executed when the element is clicked
+        });
+    });
+
+
+</script>
+<!--
+<ul class="calendar-nav">
+    <li><a class="paging-prev" href="?d=<perch:events id="prev_month" format="Y-m" />"> <perch:events id="prev_month" format="M Y" /></a></li>
+    <li><a href="?d=<perch:events id="current_month" format="Y-m" />">*</a></li>
+    <li><a class="paging-next" href="?d=<perch:events id="next_month" format="Y-m" />"><perch:events id="next_month" format="M Y" /> </a></li>
+</ul>
+
+<table class="calendar">
+    <thead>
+        <perch:events id="header" encode="false" />
+    </thead>
+    <tbody>
+        <perch:events id="body" encode="false" />
+    </tbody>
+</table>-->
+

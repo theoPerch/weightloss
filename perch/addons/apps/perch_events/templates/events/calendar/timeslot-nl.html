@@ -1,0 +1,69 @@
+<perch:before>
+
+        <div
+                id="timeSlots"
+                class="scheduleActions__group_timeSlots inter-regular">
+                    								<span
+                                                            id="selectedDateText"
+                                                            class="d-block"
+                                                    >Select a Date</span
+                                                    >
+            <div
+                    id="times"
+                    class="scheduleActions__group_times d-flex flex-wrap">
+
+</perch:before>
+<perch:form  method="post" app="perch_events" id="booking<perch:events id="formid" />" >
+<perch:input id="app" value="perch_events" hidden="true" aria-hidden="true" ></perch:input>
+
+<perch:input id="formID" value="booking" hidden="true" aria-hidden="true" ></perch:input>
+<perch:input id="slotID<perch:events id="slotID" />" hidden="true" aria-hidden="true" value="<perch:events id="slotID" />"  ></perch:input>
+<perch:input id="dayID" hidden="true" aria-hidden="true"  value="<perch:events id="dayID" />"  ></perch:input>
+<perch:input id="eventID<perch:events id="eventID" />" hidden="true" aria-hidden="true"  value="<perch:events id="eventID" />" ></perch:input>
+<perch:input id="date<perch:events id="date" />" hidden="true" aria-hidden="true"  value="<perch:events id="date" />" ></perch:input>
+<perch:input id="time<perch:events id="time" />" hidden="true" aria-hidden="true" value="<perch:events id="time" />"  ></perch:input>
+<div class="scheduleActions__timeSlot" data-value="<perch:events id="time" />">
+<perch:input    <perch:if id="booking_status" match="within" value="hold,confirmed">disabled  </perch:if> type="submit" id="submit-<perch:events id="time" />"  value="<perch:events id="time" />"></perch:input>
+    </div>
+</perch:form>
+<script>
+ /*   var formidval = 'booking'+'<perch:events id="formid" />';
+    // Select all elements where the ID ends with the string 'example'
+    let elements = document.querySelectorAll('[id$=formidval]');
+
+    // Loop through the elements and log their IDs
+    elements.forEach(element => {
+        alert(element.id);
+        document.getElementById(element.id).addEventListener('submit', function(event) {
+            // Show confirmation popup before submitting the form
+            var userConfirmed = confirm("Are you sure you want to book slot?");
+
+            // If the user clicks 'Cancel', prevent the form submission
+            if (!userConfirmed) {
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+    });*/
+
+    /* alert('<perch:events id="formid"/>')
+
+     document.getElementById("booking"+formidval).addEventListener('submit', function(event) {
+         // Show confirmation popup before submitting the form
+         var userConfirmed = confirm("Are you sure you want to book slot?");
+
+         // If the user clicks 'Cancel', prevent the form submission
+         if (!userConfirmed) {
+             event.preventDefault(); // Prevent form submission
+         }
+     });*/
+
+</script>
+
+    <perch:after>
+        </div>
+        </div>
+
+    </perch:after>
+
+
+

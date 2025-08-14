@@ -1,0 +1,24 @@
+
+    <h1 class="poll-heading"><perch:poll id="pollTitle"></h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script >
+
+    $(function () {
+        var app_path='<perch:content id="app_path">';
+
+        $('input[name="answer"]').click(function () {
+           /* var data=$(this.form).serialize();
+            $.ajax({
+                url: '/perch/addons/apps/perch_poll/runtime.php',
+                type: 'post',
+                data: { "callFunc1": "1"},
+                success: function(response) { alert('1'); }
+            });*/
+
+            $(this.form).submit();
+            var val = $(this).val();
+          //  alert(val);
+        });
+    });
+</script>

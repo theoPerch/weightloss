@@ -1,0 +1,98 @@
+
+<perch:before>
+<main class="page__content page__gap home container mt-5">
+	<div class="page__group_title d-flex flex-column flex-lg-row justify-content-between align-items-lg-start">
+		<h1 class="page__title urbanist-medium m-0 flex-grow-1 lh-sm text-start">
+			My Bookings
+		</h1>
+		<p class="urbanist-regular m-0 flex-grow-1">
+			Manage your upcoming appointments with ease. View, cancel, or track your bookings all in one place.
+		</p>
+	</div>
+
+<div class="appointment-list">
+
+	</perch:before>
+
+	<div class="appointment-item col-md-6 offset-md-3 grey-border row p-4 mb-2">
+		<div class="col-sm-7 col-12 mb-sm-0 mb-3">
+			<h4 class="urbanist-medium m-0 flex-grow-1 lh-sm text-start mb-2">
+				Booking ID<perch:events id="bookingID" />
+			</h4>
+			<h6 class="urbanist-medium m-0 flex-grow-1 lh-sm text-start mb-1"><b>Date:</b> <perch:events id="date" type="date" format="d F Y" /><br></h6>
+			<h6 class="urbanist-medium m-0 flex-grow-1 lh-sm text-start mb-3"><b>Time:</b> <perch:events id="time" /></h6>
+
+			<span class="status-pill urbanist-bold m-0 lh-sm">Status: <perch:events id="status" format="UC" /></span>
+		</div>
+		<div class="col-sm-5 col-12">
+			<div class="testCard__actions urbanist-semiBold d-flex flex-column align-items-center">
+				<a class="button button_fill urbanist-semiBold w-100 text-center" href="/orders?booking_id=<perch:events id="bookingID" />">View Order</a>
+				<button class="button button_outline urbanist-semiBold col-sm-6 col-12 w-100">Cancel</button>
+			</div>
+		</div>	
+	</div>
+
+	<perch:after>
+
+		</div>
+		</main>
+	</perch:after>
+
+
+
+<style>
+	h1 {
+		text-align: center;
+		color: #333;
+	}
+
+	/* Appointment list styling */
+	.appointment-list {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.appointment-item {
+		display: flex;
+		flex-direction: row;
+		padding: 15px;
+		border-radius: 20px;
+		align-items: top;
+	}
+
+	.appointment-time {
+		font-size: 16px;
+		color: #555;
+		font-weight: bold;
+	}
+
+	.appointment-service {
+		font-size: 14px;
+		color: #777;
+		margin: 5px 0;
+	}
+
+	.status-pill{
+		border-radius: 99px;
+    	border: 1px solid var(--chryslerBlue-color);
+		padding:4px 4px;
+		font-size:12px;
+	}
+
+	.cancel-btn {
+		background-color: #ff4b5c;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 14px;
+		margin-top: 10px;
+		transition: background-color 0.3s ease;
+	}
+
+	.cancel-btn:hover {
+		background-color: #e12d3f;
+	}
+</style>

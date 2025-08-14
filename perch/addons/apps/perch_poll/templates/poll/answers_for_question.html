@@ -1,0 +1,21 @@
+<perch:before>
+
+    <perch:form id="response" method="post" app="perch_poll">
+        <perch:input type="submit" value="response" hidden="true" aria-hidden="true" ></perch:input>
+        <perch:input id= _perch_ajax hidden="true" aria-hidden="true" value="1" />
+        <perch:input id="pollID" hidden="true" aria-hidden="true" value="<perch:content id="pollID">"  ></perch:input>
+        <perch:input id="questionID" hidden="true" aria-hidden="true" value="<perch:answer id="questionID" />"  ></perch:input>
+</perch:before>
+
+    <div class="question">
+<perch:input type="radio" name="answer" options="<perch:answer id="answer" />|<perch:answer id="answerID" />" id="answer-<perch:answer id='answerID' />"   />
+    </div>
+
+
+<perch:after>
+
+    </perch:form>
+
+
+</perch:after>
+
